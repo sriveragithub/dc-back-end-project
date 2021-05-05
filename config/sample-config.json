@@ -1,6 +1,6 @@
 {
     "development": {
-      "username": "est",
+      "username": "root",
       "password": null,
       "database": "hire_me",
       "host": "127.0.0.1",
