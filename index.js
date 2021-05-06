@@ -1,13 +1,21 @@
 const express = require('express')
+const bodyParser = require("body-parser");
+const Sequelize = require('sequelize')
+const { Post } = require('./models')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 const es6Renderer = require('express-es6-template-engine');
 
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
+  .use(bodyParser.json())
+  .use(express.json())
+  .use(express.urlencoded())
   .set('views', path.join(__dirname, 'views'))
   .engine('html', es6Renderer)
   .set('views', 'views')
   .set('view engine', 'html')
   .get('/', (req, res) => res.render('pages/index'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
+
