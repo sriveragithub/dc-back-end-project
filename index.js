@@ -16,6 +16,17 @@ express()
   .engine('html', es6Renderer)
   .set('views', 'views')
   .set('view engine', 'html')
+  //read
   .get('/', (req, res) => res.render('pages/index'))
+  .get('/posts', async (req,res) => {
+    const post = await Post.findAll();
+    res.send(post);
+  })
+
+  //create
+
+  //delete
+
+
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
