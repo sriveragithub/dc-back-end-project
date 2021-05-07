@@ -17,7 +17,16 @@ express()
   .set('views', 'views')
   .set('view engine', 'html')
   //read
-  .get('/', (req, res) => res.render('pages/index'))
+  .get('/', (req, res) => {
+    res.render('pages/index', {
+      locals: {
+        title: "Hire Me Please"
+      },
+      partials: {
+        head: "/partials/head"
+      }
+    })
+  })
   .get('/posts', async (req,res) => {
     const post = await Post.findAll();
     res.send(post);
