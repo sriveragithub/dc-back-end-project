@@ -22,7 +22,19 @@ express()
     const post = await Post.findAll();
     res.send(post);
   })
+  .post('/posts/create', async (req, res) =>{
+    const newEntry = await Post.create(
+      {
+        name: "Jon",
+        email: " jonsnow@thenorth.com",
+        bio: "The true king of the North, first in his name"
+      }
+    );
+    res.send("Server Updated")
 
+  
+  
+  })
   //create
 
   //delete
