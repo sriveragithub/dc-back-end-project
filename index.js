@@ -27,10 +27,22 @@ express()
       }
     })
   })
+
   .get('/posts', async (req,res) => {
     const post = await Post.findAll();
     res.send(post);
   })
+
+  .get('/posts/:id', async (req, res) => {
+    const userID = req.params.id;
+    const profile = await Post.findAll({
+      where: {
+        id: userID
+      }
+    });
+    res.send(profile);
+  })
+
   .post('/', async (req, res) =>{
     const newEntry = await Post.create(req.body);
     res.render('pages/index', {
