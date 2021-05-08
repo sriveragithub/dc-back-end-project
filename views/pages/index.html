@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    ${head}
-  </head>
-  <body>
-    <form action="" method="POST">
-      <input type="text" name="name" placeholder="Your name here..." />
-      <input type="email" name="email" placeholder="Your email here..." />
-      <textarea
-        name="bio"
-        id=""
-        cols="30"
-        rows="10"
-        placeholder="Your comment here..."
-      ></textarea>
-      <input type="submit" />
-    </form>
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        ${head}
+    </head>
+    <body>
+        <div class="container" id="search-form">
+            <input id="search-what" type="text" placeholder="What skill are you looking to hire for?">
+            <input id="search-where" type="text" placeholder="Where are you hiring?">
+            <button id="search-btn" type="submit">Search</button>
+        </div>
+
+        <div class="container" id="hero">
+            <h1>Please Hire Me</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus minima alias blanditiis dolorem velit quisquam tempora atque modi assumenda, labore consectetur molestiae, explicabo unde perspiciatis corrupti dolorum totam aperiam praesentium mollitia culpa consequuntur quos? Quis enim, ratione similique, beatae eos nisi repudiandae hic consequuntur autem eum, deserunt ducimus pariatur minima.</p>
+        </div>
+
+        <div class="container" id="cta">
+            <h3>Post your resume here and get hired</h3>
+            <button type="button">Create a profile</button>
+        </div>
+    </body>
 </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        ${head}
+    </head>
+    <body>
+        <div class="container" id="search-form">
+            <input id="search-what" type="text" placeholder="What skill are you looking to hire for?">
+            <input id="search-where" type="text" placeholder="Where are you hiring?">
+            <button id="search-btn" type="submit">Search</button>
+        </div>
+
+        <div class="container" id="search-results">
+            ${posts.map(post => `
+                <a href="${path}/${post.name}"><li>${post.name}</li></a>    
+            `).join('')}
+        </div>
+    </body>
+</html>
