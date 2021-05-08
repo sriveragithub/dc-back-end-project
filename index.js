@@ -42,6 +42,15 @@ express()
     });
     res.send(profile);
   })
+  .delete('/posts/:id', async (req, res) => {
+    const userID = req.params.id;
+    const profile = await Post.destroy({
+      where: {
+        id: userID
+      }
+    });
+    res.send('Profile Deleted');
+  })
 
   .post('/', async (req, res) =>{
     const newEntry = await Post.create(req.body);
