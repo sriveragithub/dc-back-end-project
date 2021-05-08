@@ -5,6 +5,7 @@ const { Post } = require('./models')
 const path = require('path')
 const PORT = process.env.PORT || 5000
 const es6Renderer = require('express-es6-template-engine');
+const { get } = require('http');
 
 
 express()
@@ -29,8 +30,30 @@ express()
   })
 
   .get('/posts', async (req,res) => {
-    const post = await Post.findAll();
-    res.send(post);
+    const path = req.path
+    const posts = await Post.findAll();
+    res.render('pages/search', {
+      locals: {
+        title: "Posts",
+        posts,
+        path
+
+      },
+      partials: {
+        head: "/partials/head"
+      }
+    })
+  })
+
+  .get('/posts/create', (req, res) => {
+    res.render('pages/newPost', {
+      locals: {
+        title: "Make a Post"
+      },
+      partials: {
+        head: "/partials/head"
+      }
+    })
   })
 
   .get('/posts/:id', async (req, res) => {
@@ -52,7 +75,7 @@ express()
     res.send('Profile Deleted');
   })
 
-  .post('/', async (req, res) =>{
+  .post('/posts/create', async (req, res) =>{
     const newEntry = await Post.create(req.body);
     res.render('pages/index', {
       locals: {
