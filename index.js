@@ -63,7 +63,15 @@ express()
         id: userID
       }
     });
-    res.send(profile);
+    res.render('pages/profile', {
+      locals:{
+        title: `${profile[0].name}'s Page`,
+        post: profile[0]
+      },
+      partials:{
+        head: "partials/head"
+      }
+    })
   })
   .delete('/posts/:id', async (req, res) => {
     const userID = req.params.id;
