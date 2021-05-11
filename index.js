@@ -80,7 +80,7 @@ express()
         id: userID
       }
     });
-    res.send('Profile Deleted');
+    res.redirect('/posts');
   })
 
   .post('/posts/create', async (req, res) =>{

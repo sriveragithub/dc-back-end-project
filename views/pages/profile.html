@@ -11,6 +11,10 @@
         <h3>${post.name}</h3>
         <h3>${post.email}</h3>
         <p>${post.bio}</p>
-        <button type="button">Delete Profile</button>
+        <form action="/posts/${post.id}" method="DELETE">
+            <!-- <button id="delete-btn" type="button">Delete Profile</button> -->
+            <input id="delete-btn" type="submit">
+        </form>
+
     </body>
 </html>
