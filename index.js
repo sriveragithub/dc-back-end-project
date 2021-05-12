@@ -98,7 +98,8 @@ express()
         post: profile[0]
       },
       partials:{
-        head: "partials/head"
+        head: "partials/head",
+        header: "/partials/header"
       }
     })
   })
@@ -109,7 +110,7 @@ express()
         id: userID
       }
     });
-    res.redirect('/posts');
+    res.redirect('/posts/all');
   })
 
   .post('/posts/create', async (req, res) =>{
