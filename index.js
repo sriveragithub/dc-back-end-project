@@ -24,7 +24,8 @@ express()
         title: "Hire Me Please"
       },
       partials: {
-        head: "/partials/head"
+        head: "/partials/head",
+        header: "/partials/header"
       }
     })
   })
@@ -40,7 +41,8 @@ express()
 
       },
       partials: {
-        head: "/partials/head"
+        head: "/partials/head",
+        header: "/partials/header"
       }
     })
   })
@@ -51,7 +53,8 @@ express()
         title: "Make a Post"
       },
       partials: {
-        head: "/partials/head"
+        head: "/partials/head",
+        header: "/partials/header"
       }
     })
   })
