@@ -64,7 +64,8 @@ express()
   
         },
         partials: {
-          head: "/partials/head"
+          head: "/partials/head",
+          header: "/partials/header"
         }
       })
     } else {
