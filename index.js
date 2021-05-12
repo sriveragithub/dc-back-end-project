@@ -73,14 +73,14 @@ express()
       }
     })
   })
-  .delete('/posts/:id', async (req, res) => {
+  .get('/posts/:id/delete', async (req, res) => {
     const userID = req.params.id;
     const profile = await Post.destroy({
       where: {
         id: userID
       }
     });
-    res.send('Profile Deleted');
+    res.redirect('/posts');
   })
 
   .post('/posts/create', async (req, res) =>{
