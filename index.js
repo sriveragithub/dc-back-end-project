@@ -47,15 +47,19 @@ express()
 
   .get('/posts/search', async (req, res) => {
     const searchQuery = req.query.bio
-    console.log(searchQuery)
-    const results = await Post.findAll({
-      where: {
-        bio: {
-          [Sequelize.Op.iLike]: `%${searchQuery}%`
+    if (searchQuery) {
+      const results = await Post.findAll({
+        where: {
+          bio: {
+            [Sequelize.Op.iLike]: `%${searchQuery}%`
+          }
         }
-      }
-    });
-    res.send(results);
+      });
+      res.send(results);
+    } else {
+      res.send('404')
+    }
+    
   })
 
   .get('/posts/create', (req, res) => {
@@ -98,14 +102,7 @@ express()
 
   .post('/posts/create', async (req, res) =>{
     const newEntry = await Post.create(req.body);
-    res.render('pages/index', {
-      locals: {
-        title: "Hire Me Please"
-      },
-      partials: {
-        head: "/partials/head"
-      }
-    })
+    res.redirect('/')
     // res.send(x)
 
   

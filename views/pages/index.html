@@ -7,26 +7,12 @@
     ${head}
   </head>
   <body>
-    <div class="container" id="search-form">
-      <input
-        id="search-what"
-        type="text"
-        placeholder="What skill are you looking to hire for?"
-      />
-      <input
-        id="search-where"
-        type="text"
-        placeholder="Where are you hiring?"
-      />
-      <button id="search-btn" type="submit">Search</button>
-      <a href="/posts"><button id="search-view-all">View All</button></a>
-    </div>
-
     <!-- Search bios for keyword -->
     <form action="/posts/search" method="GET">
-      <input type="text" name="bio" placeholder="bio" />
+      <input type="text" name="bio" placeholder="bio" required />
       <input type="submit" value="Search Bios" />
     </form>
+    <a href="/posts"><button>View All</button></a>
 
     <div class="container" id="hero">
       <h1>Please Hire Me</h1>
