@@ -45,6 +45,19 @@ express()
     })
   })
 
+  .get('/posts/search', async (req, res) => {
+    const searchQuery = req.query.bio
+    console.log(searchQuery)
+    const results = await Post.findAll({
+      where: {
+        bio: {
+          [Sequelize.Op.iLike]: `%${searchQuery}%`
+        }
+      }
+    });
+    res.send(results);
+  })
+
   .get('/posts/create', (req, res) => {
     res.render('pages/newPost', {
       locals: {
