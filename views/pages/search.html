@@ -14,10 +14,10 @@
             <button id="search-btn" type="submit">Search</button>
         </div>
 
-        <div class="container" id="search-results">
-            ${posts.map(post => `
-                <a href="${path}/${post.id}"><li>${post.name}</li></a>    
-            `).join('')}
-        </div>
-    </body>
+    <div class="container" id="search-results">
+      ${posts.map(post => `
+      <a href="${post.id}"><li>${post.name}</li></a>
+      `).join('')}
+    </div>
+  </body>
 </html>
