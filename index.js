@@ -73,7 +73,7 @@ express()
       }
     })
   })
-  .delete('/posts/:id', async (req, res) => {
+  .get('/posts/:id/delete', async (req, res) => {
     const userID = req.params.id;
     const profile = await Post.destroy({
       where: {

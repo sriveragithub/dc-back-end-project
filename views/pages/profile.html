@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        ${head}
-    </head>
-    <body>
-        <h1>Profile Page</h1>
-        <h3>${post.name}</h3>
-        <h3>${post.email}</h3>
-        <p>${post.bio}</p>
-        <form action="/posts/${post.id}" method="DELETE">
-            <!-- <button id="delete-btn" type="button">Delete Profile</button> -->
-            <input id="delete-btn" type="submit">
-        </form>
-
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    ${head}
+  </head>
+  <body>
+    <h1>Profile Page</h1>
+    <h3>${post.name}</h3>
+    <h3>${post.email}</h3>
+    <p>${post.bio}</p>
+    <a href="${post.id}/delete"><button>Delete Post</button></a>
+  </body>
 </html>
