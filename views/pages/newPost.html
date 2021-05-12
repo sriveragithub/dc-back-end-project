@@ -7,15 +7,21 @@
     ${head}
   </head>
   <body>
-    <form action="" method="POST">
-      <input type="text" name="name" placeholder="Your name here..." />
-      <input type="email" name="email" placeholder="Your email here..." />
+    <form action="/posts/create" method="POST">
+      <input type="text" name="name" placeholder="Your name here..." required />
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email here..."
+        required
+      />
       <textarea
         name="bio"
         id=""
         cols="30"
         rows="10"
         placeholder="Your comment here..."
+        required
       ></textarea>
       <input type="submit" />
     </form>

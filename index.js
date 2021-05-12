@@ -29,7 +29,7 @@ express()
     })
   })
 
-  .get('/posts', async (req,res) => {
+  .get('/posts/all', async (req,res) => {
     const path = req.path
     const posts = await Post.findAll();
     res.render('pages/search', {
@@ -43,6 +43,32 @@ express()
         head: "/partials/head"
       }
     })
+  })
+
+  .get('/posts/search', async (req, res) => {
+    const searchQuery = req.query.bio
+    if (searchQuery) {
+      const posts = await Post.findAll({
+        where: {
+          bio: {
+            [Sequelize.Op.iLike]: `%${searchQuery}%`
+          }
+        }
+      });
+      res.render('pages/search', {
+        locals: {
+          title: "Posts",
+          posts
+  
+        },
+        partials: {
+          head: "/partials/head"
+        }
+      })
+    } else {
+      res.send('404')
+    }
+    
   })
 
   .get('/posts/create', (req, res) => {
@@ -85,14 +111,7 @@ express()
 
   .post('/posts/create', async (req, res) =>{
     const newEntry = await Post.create(req.body);
-    res.render('pages/index', {
-      locals: {
-        title: "Hire Me Please"
-      },
-      partials: {
-        head: "/partials/head"
-      }
-    })
+    res.redirect('/')
     // res.send(x)
 
   
