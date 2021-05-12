@@ -7,23 +7,15 @@
     ${head}
   </head>
   <body>
-    <div class="container" id="search-form">
-      <input
-        id="search-what"
-        type="text"
-        placeholder="What skill are you looking to hire for?"
-      />
-      <input
-        id="search-where"
-        type="text"
-        placeholder="Where are you hiring?"
-      />
-      <button id="search-btn" type="submit">Search</button>
-    </div>
+    <form action="/posts/search" method="GET">
+      <input type="text" name="bio" placeholder="bio" required />
+      <input type="submit" value="Search Bios" />
+    </form>
+    <a href="/posts/all"><button>View All</button></a>
 
     <div class="container" id="search-results">
       ${posts.map(post => `
-      <a href="${path}/${post.id}"><li>${post.name}</li></a>
+      <a href="${post.id}"><li>${post.name}</li></a>
       `).join('')}
     </div>
   </body>

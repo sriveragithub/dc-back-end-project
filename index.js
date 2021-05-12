@@ -29,7 +29,7 @@ express()
     })
   })
 
-  .get('/posts', async (req,res) => {
+  .get('/posts/all', async (req,res) => {
     const path = req.path
     const posts = await Post.findAll();
     res.render('pages/search', {
@@ -48,14 +48,23 @@ express()
   .get('/posts/search', async (req, res) => {
     const searchQuery = req.query.bio
     if (searchQuery) {
-      const results = await Post.findAll({
+      const posts = await Post.findAll({
         where: {
           bio: {
             [Sequelize.Op.iLike]: `%${searchQuery}%`
           }
         }
       });
-      res.send(results);
+      res.render('pages/search', {
+        locals: {
+          title: "Posts",
+          posts
+  
+        },
+        partials: {
+          head: "/partials/head"
+        }
+      })
     } else {
       res.send('404')
     }
