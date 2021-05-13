@@ -24,7 +24,8 @@ express()
         title: "Hire Me Please"
       },
       partials: {
-        head: "/partials/head"
+        head: "/partials/head",
+        header: "/partials/header"
       }
     })
   })
@@ -40,7 +41,8 @@ express()
 
       },
       partials: {
-        head: "/partials/head"
+        head: "/partials/head",
+        header: "/partials/header"
       }
     })
   })
@@ -62,7 +64,8 @@ express()
   
         },
         partials: {
-          head: "/partials/head"
+          head: "/partials/head",
+          header: "/partials/header"
         }
       })
     } else {
@@ -77,7 +80,8 @@ express()
         title: "Make a Post"
       },
       partials: {
-        head: "/partials/head"
+        head: "/partials/head",
+        header: "/partials/header"
       }
     })
   })
@@ -95,7 +99,8 @@ express()
         post: profile[0]
       },
       partials:{
-        head: "partials/head"
+        head: "partials/head",
+        header: "/partials/header"
       }
     })
   })
@@ -106,7 +111,7 @@ express()
         id: userID
       }
     });
-    res.redirect('/posts');
+    res.redirect('/posts/all');
   })
 
   .post('/posts/create', async (req, res) =>{

@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    ${head}
-  </head>
-  <body>
-    <form action="/posts/search" method="GET">
-      <input type="text" name="bio" placeholder="bio" required />
-      <input type="submit" value="Search Bios" />
-    </form>
-    <a href="/posts/all"><button>View All</button></a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        ${head}
+    </head>
+    <body class="bg-blue-100">
+        ${header}
+        <form action="/posts/search" method="GET">
+          <input type="text" name="bio" placeholder="bio" required />
+          <input type="submit" value="Search Bios" />
+        </form>
+        <a href="/posts/all"><button>View All</button></a>
 
     <div class="container" id="search-results">
       ${posts.map(post => `
