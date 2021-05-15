@@ -1,0 +1,23 @@
+{
+    "development": {
+      "username": "aqstvwmq",
+      "password": "l23XySqlJkgZmzj8xzw2NhvGwjbDfzk6",
+      "database": "aqstvwmq",
+      "host": "queenie.db.elephantsql.com",
+      "dialect": "postgres"
+    },
+    "test": {
+      "username": "aqstvwmq",
+      "password": "l23XySqlJkgZmzj8xzw2NhvGwjbDfzk6",
+      "database": "database_test",
+      "host": "queenie.db.elephantsql.com",
+      "dialect": "postgres"
+    },
+    "production": {
+      "username": "aqstvwmq",
+      "password": "l23XySqlJkgZmzj8xzw2NhvGwjbDfzk6",
+      "database": "database_production",
+      "host": "queenie.db.elephantsql.com",
+      "dialect": "postgres"
+    }
+}
