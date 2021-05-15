@@ -11,3 +11,5 @@ config.json
 # Docker
 Dockerfile
 docker-compose.yml
+
+tailwinddev.css
