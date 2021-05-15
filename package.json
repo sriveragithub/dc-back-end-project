@@ -7,11 +7,13 @@
   },
   "main": "index.js",
   "scripts": {
+    "prod": "NODE_ENV=production npm start",
     "dev": "nodemon index.js",
     "start": "node index.js",
     "test": "node test.js"
   },
   "dependencies": {
+    "dotenv": "^9.0.2",
     "express": "^4.15.2",
     "express-es6-template-engine": "^2.2.3",
     "pg": "^8.6.0",
