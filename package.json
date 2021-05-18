@@ -1,9 +1,10 @@
 {
   "name": "Hire-Me-Please",
-  "version": "1.1",
+  "version": "1.0.0",
   "description": "Looking to hire someone? Looking to get hired? You’re in the right place! If you’re an employer looking for workers take a look at our Job Seekers page. Or, if you want to put yourself out there, head on over to Create Post and tell the world about yourself.",
   "engines": {
-    "node": "14.x"
+    "node": "^14.x",
+    "npm": "^7.11.2"
   },
   "main": "index.js",
   "scripts": {
