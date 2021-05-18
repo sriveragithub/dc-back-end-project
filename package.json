@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.3.0",
-  "description": "A sample Node.js app using Express 4",
+  "name": "Hire Me Please",
+  "version": "1.0",
+  "description": "Looking to hire someone? Looking to get hired? You’re in the right place! If you’re an employer looking for workers take a look at our Job Seekers page. Or, if you want to put yourself out there, head on over to Create Post and tell the world about yourself.",
   "engines": {
     "node": "14.x"
   },
@@ -27,7 +27,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/sriveragithub/dc-back-end-project"
   },
   "keywords": [
     "node",
