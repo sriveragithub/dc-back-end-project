@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     ${head}
   </head>
-  <body class="bg-blue-100">
+  <body class="bg-blue-100 font-serif">
     ${header}
     <form class="flex flex-col items-center m-8" action="" method="POST">
+      <label class="mt-2 text-4xl" for="name">Full Name</label>
       <input class="w-3/4 text-center border border-transparent shadow-lg rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ..." type="text" name="name" placeholder="Your name here..." />
+      <label class="mt-2 text-4xl" for="email">Email address</label>
       <input class="mt-2 w-3/4 text-center border border-transparent shadow-lg rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ..." type="email" name="email" placeholder="Your email here..." />
+      <label class="mt-2 text-4xl" for="bio">Bio</label>
       <textarea
         class="mt-2 w-1/2 h-80 text-center border border-transparent shadow-lg rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ..."
         name="bio"
