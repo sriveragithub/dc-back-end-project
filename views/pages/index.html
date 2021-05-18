@@ -8,30 +8,30 @@
   </head>
   <body class="bg-blue-100 font-serif">
     ${header}
-
-    <form class="flex flex-col items-center mt-8 mr-8 ml-8" action="/posts/search" method="GET">
-      <label class="text-3xl text-center" for="bio">What skill are you looking to hire for?</label>
-      <input class="w-3/4 mt-2 text-center border border-transparent shadow-lg rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ..." type="text" name="bio" placeholder="keywords..." required />
-      <input class="w-36 mt-2 py-2 px-4 font-semibold rounded-lg shadow-lg text-white bg-blue-500 hover:bg-blue-700" type="submit" value="Search Skills" />
+    <form class="flex flex-col items-center mt-16 mr-8 ml-8 mb-4" action="/posts/search" method="GET">
+      <label class="text-4xl text-center" for="bio">What skill are you looking to hire for?</label>
+      <input class="w-3/4 mt-4 text-center border border-transparent shadow-lg rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent ..." type="text" name="bio" placeholder="keywords..." required />
+      <input class="w-36 mt-4 py-2 px-4 font-semibold rounded-lg shadow-lg text-white bg-blue-500 hover:bg-blue-700" type="submit" value="Search Skills" />
     </form>
     <div class="flex flex-col items-center">
       <a href="/posts/all"><button class="w-30 mt-2 py-2 px-4 font-semibold rounded-lg shadow-lg text-white bg-blue-500 hover:bg-blue-700">Job Seekers</button></a>
     </div>
 
-    <div class="flex flex-col items-center m-8" id="hero">
-      <h1 class="font-black text-5xl lg:text-6xl">Please Hire Me</h1>
-      <p class="mt-2">
+    <div class="bg-white flex flex-col items-center mt-8 mb-8 pt-8" id="hero">
+      <h1 class="font-black text-6xl lg:text-8xl text-gray-900">Please Hire Me</h1>
+      <p class="mt-8 p-8 w-3/4 lg:w-1/2 text-2xl text-gray-600">
         Looking to hire someone? Looking to get hired? You’re in the right place! 
-        If you’re an employer looking for workers take a look at our Job Seekers page. 
+        If you’re an employer looking for workers, take a look at our Job Seekers page. 
         Or, if you want to put yourself out there, head on over to Create Post and 
-        tell the world about yourself. 
+        tell the world about yourself! 
       </p>
+      <img src="/images/hero_image.png" width="600" alt="An icon of a resume">
     </div>
 
-    <div class="flex flex-col items-center m-8" id="cta">
-      <h3 class="font-black text-3xl lg:text-4xl">Post your resume here and get hired</h3>
+    <div class="flex flex-col items-center m-16" id="cta">
+      <h3 class="font-black text-4xl lg:text-5xl">Post your resume today and get hired</h3>
       <a href="/posts/create"
-        ><button class="mt-2 py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-blue-500 hover:bg-blue-700" type="button">Create Post</button></a
+        ><button class="mt-8 py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-blue-500 hover:bg-blue-700" type="button">Create Post</button></a
       >
     </div>
   </body>
